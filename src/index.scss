@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+
+$bg: #130f40;
+$textcolor: #fff;
+$font: "Kdam Thmor Pro", sans-serif;
+
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@mixin buttons {
+}
+
+body {
+  background-color: $bg;
+  color: $textcolor;
+  text-align: center;
+
+  font-family: $font;
+  min-height: 100vh;
+
+  @include flexbox;
+
+  button {
+    background-color: transparent;
+    padding: 10px 15px;
+    font-size: 30px;
+    margin: 10px;
+    color: $textcolor;
+    cursor: pointer;
+    border-color: white;
+  }
+
+  .flex {
+    @include flexbox;
+  }
+
+  .timer-container {
+    margin: 20px;
+
+    h1 {
+      text-align: center;
+    }
+
+    .actions-wrapper {
+      span {
+        font-size: 30px;
+        margin: 0 10px;
+      }
+    }
+  }
+
+  .clock-container {
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px 60px;
+    margin-top: 20px;
+    display: inline-block;
+
+    h2 {
+      margin: 0;
+    }
+    span {
+      font-size: 60px;
+    }
+  }
+}
